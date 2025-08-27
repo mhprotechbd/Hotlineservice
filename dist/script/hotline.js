@@ -55,7 +55,7 @@ const cardsList = [
     color: 'bg-[#FFE3E2]',
   },
   {
-    img: './dist/assets/emergency.png',
+    img: './dist/assets/woman.png',
     title: 'Women & Child Helpline',
     subtitle: 'Women & Child Helpline',
     number: '109',
@@ -63,15 +63,15 @@ const cardsList = [
     color: 'bg-[#FFE3E2]',
   },
   {
-    img: './dist/assets/emergency.png',
+    img: './dist/assets/corruption.png',
     title: 'Anti-Corruption Helpline',
     subtitle: 'Anti-Corruption',
     number: '106',
-    category: 'Help',
+    category: 'Govt.',
     color: 'bg-[#FFE3E2]',
   },
   {
-    img: './dist/assets/emergency.png',
+    img: './dist/assets/electricity.jpg',
     title: 'Electricity Helpline',
     subtitle: 'Electricity Outage',
     number: '16216',
@@ -79,20 +79,20 @@ const cardsList = [
     color: 'bg-[#FFE3E2]',
   },
   {
-    img: './dist/assets/emergency.png',
+    img: './dist/assets/brac.png',
     title: 'Brac Helpline',
     subtitle: 'Brac',
     number: '16445',
     category: 'NGO',
-    color: 'bg-[#FFE3E2]',
+    color: 'bg-[#41ff6b1a]',
   },
   {
-    img: './dist/assets/emergency.png',
+    img: './dist/assets/Bangladesh-Railway.png',
     title: 'Bangladesh Railway Helpline ',
     subtitle: 'Bangladesh Railway',
     number: '163',
     category: 'Travel',
-    color: 'bg-[#FFE3E2]',
+    color: 'bg-[#DFEFFF]',
   },
 ];
 
@@ -117,7 +117,7 @@ for (const card of cardsList) {
                 <p class="text-[#5C5C5C] text-[1rem] md:text-[1.25rem]">${card.category}</p>
               </div>
               <div class="flex items-center justify-between gap-2">
-                <button class="btn copy-btn text-[#5C5C5C] font-roboto flex-1"><i class="fa-solid fa-copy"></i> Copy</button>
+                <button class="btn copy-btn text-[#5C5C5C] bg-white border-1 border-[#D4D6D5] rounded-[8px] font-roboto flex-1"><i class="fa-solid fa-copy"></i> Copy</button>
                 <button class="btn bg-[#00A63E] rounded-[8px] text-white flex-1 btn-call"><i
                     class="fa-solid fa-phone"></i>Call</button>
               </div>

@@ -5,7 +5,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home - Emergency Hotline</title>
-  <!-- Favicon -->
   <link rel="shortcut icon" href="./dist/assets/logo-dark.png" type="image/x-icon" />
   <link rel="stylesheet" href="./dist/styles/hotline.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
@@ -15,33 +14,35 @@
 
 <body class="bg-[#F5FFF6]">
   <header class=" bg-white">
+    <!-- Nav Bar Started -->
     <nav
-      class="custom-container flex justify-between items-center  px-3 md:px-7 xl:px-[60px] py-6 shadow-[0px_1px_50px_0px_rgba(181,181,181,0.25)]">
+      class="custom-container flex flex-col gap-5 sm:flex-row justify-between items-center px-3 md:px-7 xl:px-[28px] py-6 shadow-[0px_1px_50px_0px_rgba(181,181,181,0.25)]">
       <div class="flex items-center gap-2">
         <img class="w-[50px]" src="./dist/assets/logo.png" alt="">
         <h2 class="text-[#006747] font-extrabold">Emergeny <br />Services</h2>
       </div>
       <div class="flex items-center justify-center gap-1.5 md:gap-5">
-        <div class="bg-[#41ff6b1a] rounded-[50px] py-3 px-3 md:px-5 font-inter font-bold text-center">
-          <p><span id="heart-value" class="mr-3 font-black">0</span><span class="text-red-500">❤</span></p>
+        <div class="bg-[#41ff6b1a] rounded-[50px] py-3 px-5 md:px-7 font-inter font-bold text-center flex">
+          <span id="heart-value" class="mr-3 font-black">0</span><img src="./dist/assets/heart.png" alt="heart"
+            class="h-6 ml-1" />
         </div>
         <div class="flex items-center bg-[#41ff6b1a] rounded-[50px] py-3 px-5 gap-3">
           <h2 id="stock-coin" class="font-inter font-black">100</h2>
           <img class="w-6" src="./dist/assets/coin.png" alt="">
         </div>
-        <div class="bg-[#00A63E] rounded-[50px] text-white py-3 px-6 hidden sm:block">
+        <div class="bg-[#00A63E] rounded-[50px] text-white py-3 px-6 ">
           <p><span id="copy-count" class="mr-3">0</span>Copy</p>
         </div>
-
       </div>
     </nav>
   </header>
 
-
+  <!-- Main Section Started -->
   <main>
+    <!-- Hero Section -->
     <section class="custom-container bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] px-3 py-3">
       <div class=" text-center text-white py-4">
-        <img class="max-w-[92px] mx-auto" src="./dist/assets/logo.png" alt="">
+        <img class="max-w-[92px] mx-auto" src="./dist/assets/logo-dark.png" alt="">
         <h1 class="font-hind text-[1.8rem] md:text-[2.5rem] font-bold ">Emergency Service Directory</h1>
         <h3 class="font-hind font-semibold text-[1rem] md:text-[1.25rem]">Government Emergency Services at Your
           Fingertip – A Project
@@ -49,6 +50,7 @@
           Bangladesh</h3>
       </div>
     </section>
+    <!-- Main Card section -->
     <section class="custom-container px-3 pt-10 pb-6 md:pb-[86px] md:px-7 2xl:px-[60px]">
       <div class="grid grid-cols-12 gap-4 md:gap-4">
         <!--All card section -->
