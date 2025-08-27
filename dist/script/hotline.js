@@ -100,7 +100,7 @@ for (const card of cardsList) {
   const newCard = document.createElement('div');
   newCard.innerHTML = `
   <div id="card-section-main">
-            <div class="p-8 bg-white rounded-[12px] shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)]">
+            <div class="container p-8 bg-white rounded-[12px] shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)]">
               <div class="flex items-center justify-between mb-4">
                 <div class="rounded-2xl p-[14px] img-bg">
                   <img class="w-8 mx-auto" src="${card.img}" alt="">
