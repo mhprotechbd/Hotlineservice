@@ -152,7 +152,6 @@ document
       const name =
         callBtn.parentNode.parentNode.parentNode.children[0].children[1]
           .children[1].innerText;
-      alert('📞 Calling ' + name + ' ' + number + '...');
       const stockCoin = Number(getElement('stock-coin').innerText);
       if (stockCoin < 20) {
         alert(
@@ -160,6 +159,7 @@ document
         );
         return;
       } else {
+        alert('📞 Calling ' + name + ' ' + number + '...');
         const finalCoin = stockCoin - 20;
         getElement('stock-coin').innerText = finalCoin;
         const historyDiv = document.createElement('div');
@@ -176,7 +176,7 @@ document
               </div>
             </div>
         `;
-        historyParent.appendChild(historyDiv);
+        historyParent.prepend(historyDiv);
       }
     }
   });
@@ -194,6 +194,8 @@ for (heart of hearts) {
   heart.addEventListener('click', function () {
     totalHeart = totalHeart + 1;
     document.getElementById('heart-value').innerText = totalHeart;
+    this.classList.add('text-red-500');
+    console.log(this);
   });
 }
 

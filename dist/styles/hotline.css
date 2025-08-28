@@ -1677,6 +1677,9 @@
   .bg-\[\#FFE3E2\] {
     background-color: #FFE3E2;
   }
+  .bg-red-500 {
+    background-color: var(--color-red-500);
+  }
   .bg-white {
     background-color: var(--color-white);
   }
@@ -1800,6 +1803,9 @@
   }
   .text-\[\#006747\] {
     color: #006747;
+  }
+  .text-red-500 {
+    color: var(--color-red-500);
   }
   .text-white {
     color: var(--color-white);
