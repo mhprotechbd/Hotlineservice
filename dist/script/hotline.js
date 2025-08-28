@@ -100,7 +100,7 @@ for (const card of cardsList) {
   const newCard = document.createElement('div');
   newCard.innerHTML = `
   <div id="card-section-main">
-            <div class="container p-8 bg-white rounded-[12px] shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)]">
+            <div class="container p-8 bg-white rounded-[12px] shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] h-full">
               <div class="flex items-center justify-between mb-4">
                 <div class="rounded-2xl p-[14px] img-bg">
                   <img class="w-8 mx-auto" src="${card.img}" alt="">
@@ -110,12 +110,15 @@ for (const card of cardsList) {
                 </div>
                 
               </div>
-              <h2 class="font-hind text-[1.25rem] xl:text-xl 2xl:text-2xl font-bold">${card.title}</h2>
+              <div class= "">
+              <h2 class="font-hind text-[1.25rem] xl:text-xl 2xl:text-2xl font-bold truncate w-full">${card.title}</h2>
               <h3 class="text-[#5C5C5C] text-[1.15rem] md:text-[1.25rem] font-roboto mb-6">${card.subtitle} </h3>
               <h2 class="font-bold font-roboto text-[1.5rem] md:text-[2rem]">${card.number}</h2>
               <div class="bg-[#F2F2F2] rounded-[9999px] inline-block px-4 py-1.5 text-center mb-6">
                 <p class="text-[#5C5C5C] text-[1rem] md:text-[1.25rem]">${card.category}</p>
               </div>
+              </div>
+              
               <div class="flex items-center justify-between gap-2">
                 <button class="btn copy-btn text-[#5C5C5C] bg-white border-1 border-[#D4D6D5] rounded-[8px] font-roboto flex-1"><i class="fa-solid fa-copy"></i> Copy</button>
                 <button class="btn bg-[#00A63E] rounded-[8px] text-white flex-1 btn-call"><i
@@ -142,19 +145,20 @@ document
       const callBtn = event.target.closest('.btn-call');
       const title =
         callBtn.parentNode.parentNode.parentNode.children[0].children[1]
-          .innerText;
+          .children[0].innerText;
       const number =
-        callBtn.parentNode.parentNode.parentNode.children[0].children[3]
-          .innerText;
+        callBtn.parentNode.parentNode.parentNode.children[0].children[1]
+          .children[2].innerText;
       const name =
-        callBtn.parentNode.parentNode.parentNode.children[0].children[2]
-          .innerText;
+        callBtn.parentNode.parentNode.parentNode.children[0].children[1]
+          .children[1].innerText;
       alert('📞 Calling ' + name + ' ' + number + '...');
       const stockCoin = Number(getElement('stock-coin').innerText);
       if (stockCoin < 20) {
         alert(
           'insufficient Coin to make the call , Minimum 20 coin required to call'
         );
+        return;
       } else {
         const finalCoin = stockCoin - 20;
         getElement('stock-coin').innerText = finalCoin;
@@ -201,8 +205,9 @@ document
     if (event.target.closest('.copy-btn')) {
       const copyBtn = event.target.closest('.copy-btn');
       const textCopy =
-        copyBtn.parentNode.parentNode.parentNode.children[0].children[3]
-          .innerText;
+        copyBtn.parentNode.parentNode.parentNode.children[0].children[1]
+          .children[2].innerText;
+      console.log(textCopy);
       navigator.clipboard.writeText(textCopy);
       alert('✔ Number copied ' + textCopy);
       const totalCopy = copyCount + 1;
