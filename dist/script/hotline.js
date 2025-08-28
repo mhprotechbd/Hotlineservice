@@ -195,7 +195,6 @@ for (heart of hearts) {
     totalHeart = totalHeart + 1;
     document.getElementById('heart-value').innerText = totalHeart;
     this.classList.add('text-red-500');
-    console.log(this);
   });
 }
 
@@ -209,7 +208,6 @@ document
       const textCopy =
         copyBtn.parentNode.parentNode.parentNode.children[0].children[1]
           .children[2].innerText;
-      console.log(textCopy);
       navigator.clipboard.writeText(textCopy);
       alert('✔ Number copied ' + textCopy);
       const totalCopy = copyCount + 1;
